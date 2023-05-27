@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="header__name">WALLET</h1>
+        </header>
+        <div class="main">
+            <div class="main__column main__result">
+                <div class="diagram-block">
+                    <h2 class="diagram-title">Диаграмма расходов</h2>
+                    <!-- <div class="diagram">
+                    </div> -->
+                    <div class="canvas">
+                        <div class="canvas">
+                            <svg class="chart" width="300" height="300" viewBox="0 0 50 50">
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="legend">
+                    <ul class="legend__list">
+                        <li class="legend__item" data-category="product">
+                            <span class="legend__category">Продукты</span>
+                            <span class="legend__price" data-price="product">0</span>
+                        </li>
+                        <li class="legend__item" data-category="fastfood">
+                            <span class="legend__category">ФастФуд</span>
+                            <span class="legend__price">0</span>
+                        </li>
+                        <li class="legend__item" data-category="sport">
+                            <span class="legend__category">Спорт</span>
+                            <span class="legend__price">0</span>
+                        </li>
+                        <li class="legend__item" data-category="drinks">
+                            <span class="legend__category">Напитки</span>
+                            <span class="legend__price">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__column purcashes">
+                <table class="purcashes__table">
+                    <thead class="purcashes__header">
+                        <tr class="purcashes__row">
+                            <td class="purcashes__td">Наименование</td>
+                            <td class="purcashes__td">Категория</td>
+                            <td class="purcashes__td">Цена</td>
+                            <td class="purcashes__td"></td>
+                        </tr>
+                    </thead>
+                    <tbody class="purcashes__list" id="tbody">
+                        <!-- <tr class="purcashes__item purcashes__row" data-category="product">
+                            <td class="purcashes__td">Вода</td>
+                            <td class="purcashes__td">Напитки</td>
+                            <td class="purcashes__td">1200</td>
+                            <td class="purcashes__td"><i class="purcashes__item-del fa-solid fa-xmark"></i></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="main__column editor">
+                <form class="editor__form" name="form">
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Товар:</p>
+                        <input type="text" class="editor__form-input" name="name" placeholder="Наименование">
+                    </div>
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Цена:</p>
+                        <input type="text" class="editor__form-input" name="price" placeholder="0">
+                    </div>
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Категория:</p>
+                        <select name="select-category" id="selectCategory" class="editor__form-input">
+                            <option value="poduct">Продукты</option>
+                            <option value="fastFood">ФастФуд</option>
+                            <option value="sport">Спорт</option>
+                            <option value="drinks">Напитки</option>
+                        </select>
+                    </div>
+                    <div class="editor__form-row">
+                        <button class="btn" name="addBtn">Добавить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

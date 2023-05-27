@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
+.header {
+    padding: 30px 0px;
+}
+
+.header__name {}
+
+.main {
+    display: flex;
+    column-gap: 10px;
+}
+
+.main__column {
+    background-color: rgb(104, 104, 104);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main__result {}
+
+.diagram-block {
+    padding-bottom: 30px;
+}
+
+.diagram-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.diagram {
+    /*  height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: red; */
+}
+
+.canvas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+}
+
+.unit {
+    fill: none;
+    stroke-width: 10;
+}
+
+.unit:nth-child(1) {
+    stroke: green;
+    /* stroke-dasharray: 10 100; */
+
+}
+
+.unit:nth-child(2) {
+    stroke: rgb(255, 174, 0);
+    /* stroke-dasharray: 20 100;
+    stroke-dashoffset: -10; */
+}
+
+.unit:nth-child(3) {
+    stroke: aqua;
+    /* stroke-dasharray: 50 100;
+    stroke-dashoffset: -30; */
+}
+
+.unit:nth-child(4) {
+    stroke: violet;
+    /* stroke-dasharray: 20 100;
+    stroke-dashoffset: -80; */
+}
+
+
+.legend {}
+
+.legend__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.legend__item {
+    display: flex;
+    column-gap: 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 5px;
+}
+
+.legend__category {
+    display: flex;
+    align-items: center;
+}
+
+.legend__category::before {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.legend__item[data-category="product"] ::before {
+    background-color: green;
+}
+
+.legend__item[data-category="fastfood"] ::before {
+    background-color: rgb(255, 174, 0);
+}
+
+.legend__item[data-category="sport"] ::before {
+    background-color: aqua;
+}
+
+.legend__item[data-category="drinks"] ::before {
+    background-color: violet;
+}
+
+.legend__price {}
+
+.purcashes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.purcashes__header {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.purcashes__row {
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+}
+
+.purcashes__row td {
+    padding: 10px;
+}
+
+
+.purcashes__name {}
+
+.tasks__category {}
+
+.purcashes__price {}
+
+.purcashes__item .purcashes__price::after,
+.legend__price::after {
+    content: " \20BD";
+}
+
+.purcashes__list {}
+
+.purcashes__item[data-category="product"] {
+    border-left: 5px solid green;
+}
+
+.purcashes__item[data-category="fastfood"] {
+    border-left: 5px solid green;
+}
+
+.purcashes__item[data-category="sport"] {
+    border-left: 5px solid green;
+}
+
+.purcashes__item[data-category="drinks"] {
+    border-left: 5px solid green;
+}
+
+.purcashes__item .purcashes__item-del {
+    font-size: 30px;
+    text-align: right;
+    padding: 0px 20px;
+}
+
+.purcashes__close path {
+    fill: white;
+}
+
+.editor {
+    width: 20%;
+}
+
+.editor__form {
+    padding: 10px;
+}
+
+.editor__form-row {
+    margin-bottom: 20px;
+}
+
+.editor__form-input-name {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.editor__form-input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 2px;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    width: 100%;
+}
+
+.editor__form-row input {
+    color: white;
+}
+
+.editor__form-input::placeholder {
+    color: rgba(255, 255, 255, 0.432);
+}
+
+#select-category {
+    background-color: aliceblue;
+}
+
+.btn {
+    background: rgb(36, 36, 36);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: rgb(58, 58, 58);
+    cursor: pointer;
+}
